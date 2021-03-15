@@ -11,8 +11,6 @@
 	</bean>
 
 
-
-
 	<bean class="de.hybris.trainingSk277.facades.product.data.ManufacturerDetailsData">
 		<property name="id" type="Integer"/>
 		<property name="name" type="String"/>
@@ -29,7 +27,6 @@
 		<property name="code" type="String"/>
 		<property name="name" type="String"/>
 	</bean>
-
 
 
 	<bean class="de.hybris.trainingSk277.facades.product.data.ProjectData">

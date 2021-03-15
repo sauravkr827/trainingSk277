@@ -10,10 +10,10 @@ import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.type.ComposedType;
 import org.apache.log4j.Logger;
 
-public class ManufacturerDetailsAuditEntry extends GeneratedManufacturerDetailsAuditEntry
+public class Erode2 extends GeneratedErode2
 {
 	@SuppressWarnings("unused")
-	private static final Logger LOG = Logger.getLogger( ManufacturerDetailsAuditEntry.class.getName() );
+	private static final Logger LOG = Logger.getLogger( Erode2.class.getName() );
 	
 	@Override
 	protected Item createItem(final SessionContext ctx, final ComposedType type, final ItemAttributeMap allAttributes) throws JaloBusinessException

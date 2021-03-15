@@ -58,14 +58,17 @@
 	</bean>
 
 
+
 	<!--ManufacturerDetails RemoveInterceptor  -->
 
+<!--
 	<bean id="manufacturerDetailsRemoveInterceptor1" class="de.hybris.trainingSk277.core.customInterceptor.ManufacturerDetailsRemoveInterceptor"/>
 
 	<bean id="manufactuterdetailsInterceptorMapping" class="de.hybris.platform.servicelayer.interceptor.impl.InterceptorMapping">
 		<property name="interceptor" ref="manufacturerDetailsRemoveInterceptor1"/>
 		<property name="typeCode" value="ManufacturerDetails"/>
 	</bean>
+-->
 
 	<!--ManufacturerDetails ValidateInterceptor  -->
 	<bean id="manufacturerDetailValidateInterceptor" class="de.hybris.trainingSk277.core.customInterceptor.ManufacturerDetailsValidateInterceptor"/>
@@ -80,6 +83,21 @@
 		<property name="interceptor" ref="manufacturerDetailPrepareInterceptor"/>
 		<property name="typeCode" value="ManufacturerDetails"/>
 	</bean>
+
+	<!--Mail-->
+	<bean id="generateHelloWorldEmail" parent="abstractGenerateEmailAction">
+		<property name="frontendTemplateName" value="HelloWorldEmailTemplate"/>
+	</bean>
+
+	<bean id="helloWorldEmailProcessDefinitionResource"
+		  class="de.hybris.platform.processengine.definition.ProcessDefinitionResource" >
+
+		<property name="resource" value="classpath:/trainingSk277core/processes/helloWorldEmailProcess.xml"/>
+
+	</bean>
+
+
+
 
 
 

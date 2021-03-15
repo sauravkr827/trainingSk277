@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Feb 24, 2021, 4:15:19 PM                    ---
+ * --- Generated at Mar 12, 2021, 6:10:53 PM                    ---
  * ----------------------------------------------------------------
  *  
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
@@ -21,10 +21,22 @@ public class GeneratedTrainingSk277CoreConstants
 		public static final String APPARELPRODUCT = "ApparelProduct".intern();
 		public static final String APPARELSIZEVARIANTPRODUCT = "ApparelSizeVariantProduct".intern();
 		public static final String APPARELSTYLEVARIANTPRODUCT = "ApparelStyleVariantProduct".intern();
+		public static final String COMPUTER = "Computer".intern();
 		public static final String ELECTRONICSCOLORVARIANTPRODUCT = "ElectronicsColorVariantProduct".intern();
+		public static final String ERODE2 = "Erode2".intern();
+		public static final String HELLOWORLDEMAILPROCESS = "HelloWorldEmailProcess".intern();
 		public static final String MANUDETAUDITENTRY = "ManuDetAuditEntry".intern();
 		public static final String MANUFACTURERDETAILS = "ManufacturerDetails".intern();
+		public static final String STUDENT = "Student".intern();
 		public static final String SWATCHCOLORENUM = "SwatchColorEnum".intern();
+		public static final String TEACHER = "Teacher".intern();
+		public static final String TEST = "Test".intern();
+		public static final String TEST1 = "Test1".intern();
+		public static final String TEST10 = "Test10".intern();
+		public static final String TEST2 = "Test2".intern();
+		public static final String TEST3 = "Test3".intern();
+		public static final String TEST5 = "Test5".intern();
+		public static final String TEST9 = "Test9".intern();
 		public static final String VERSIONOFHUMAN = "VersionOfHuman".intern();
 	}
 	public static class Attributes
@@ -33,6 +45,16 @@ public class GeneratedTrainingSk277CoreConstants
 		{
 			public static final String ISNEWPRODUCT = "isNewProduct".intern();
 			public static final String MANUFACTURERDETAILS = "manufacturerDetails".intern();
+		}
+		public static class Test2
+		{
+			public static final String ID = "id".intern();
+			public static final String NAME = "name".intern();
+		}
+		public static class Test3
+		{
+			public static final String ID1 = "id1".intern();
+			public static final String NAME1 = "name1".intern();
 		}
 	}
 	public static class Enumerations
@@ -62,6 +84,7 @@ public class GeneratedTrainingSk277CoreConstants
 	public static class Relations
 	{
 		public static final String MANUFACTURERTOPRODUCT = "ManufacturerToProduct".intern();
+		public static final String STUDENTTEACHER = "StudentTeacher".intern();
 	}
 	
 	protected GeneratedTrainingSk277CoreConstants()

@@ -146,16 +146,24 @@
 
 
 
-	<bean id="productIsnewPopulator" class="de.hybris.trainingSk277.facades.populators.ProductIsNewPopulator"/>
+<!--	<bean id="productIsnewPopulator" class="de.hybris.trainingSk277.facades.populators.ProductIsNewPopulator"/>
 	<bean parent="modifyPopulatorList">
 		<property name="list" ref="productConverter"/>
 		<property name="add" ref="productIsnewPopulator"/>
+	</bean>-->
+
+
+	<!--<alias name="beanOveridingIsNewProductPopulator" alias="productBasicPopulator"/>-->
+	<bean id="beanOveridingIsNewProductPopulator" class="de.hybris.trainingSk277.facades.populators.BeanOveridingIsNewProductPopulator" parent="defaultProductBasicPopulator">
+
 	</bean>
 
-
-
-
-
+	<bean id="helloWorldEmailContext"
+		  class="com.stackextend.training.core.model.process.HelloWorldEmailProcessModel"
+		  parent="customerEmailContext"
+		  scope="prototype" >
+	</bean>
+	
 
 
 	<!-- accelerator Image Format Mappings -->

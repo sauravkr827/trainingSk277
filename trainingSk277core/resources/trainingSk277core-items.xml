@@ -8,6 +8,8 @@
         <collectiontype code="GenderList" elementtype="Gender" autocreate="true" generate="true" type="list"/>
         <collectiontype code="SwatchColorSet" elementtype="SwatchColorEnum" autocreate="true" generate="true"
                         type="set"/>
+
+        <collectiontype code="ModelsOfComputer" elementtype="java.lang.String" generate="true" autocreate="true" type="collection"/>
     </collectiontypes>
 
     <enumtypes>
@@ -32,6 +34,10 @@
         </enumtype>
     </enumtypes>
 
+    <maptypes>
+        <maptype code="Bill" argumenttype="java.lang.String" returntype="java.lang.String"/>
+    </maptypes>
+
 <relations>
 
 
@@ -48,6 +54,19 @@
                 <modifiers read="true" write="true" search="true" optional="true"/>
             </targetElement>
         </relation>
+
+
+    <relation code="StudentTeacher" localized="false" autocreate="true" generate="true">
+        <deployment table="StudentTeacher" typecode="15553"/>
+        <sourceElement type="Student" cardinality="many" qualifier="student" ordered="false" >
+            <modifiers read="true" write="true" search="true" optional="true"/>
+        </sourceElement>
+        <targetElement type="Teacher" cardinality="many" qualifier="teacher" ordered="false" >
+            <modifiers read="true" write="true" search="true" optional="true" partof="true"/>
+        </targetElement>
+    </relation>
+
+
 
 
 </relations>
@@ -190,6 +209,198 @@
                 </attributes>
             </itemtype>
 
+
+
+
+            <itemtype code="Test1"  autocreate="true" generate="true">
+                <deployment table="Test1" typecode="25008"/>
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.Integer">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+            <itemtype code="Test"  autocreate="true" generate="true">
+                <deployment table="Test" typecode="25009"/>
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.Integer">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+            <itemtype code="Test2"  autocreate="true" generate="false">
+                <deployment table="Test2" typecode="25012"/>
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.Integer">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+
+            <itemtype code="Student"  autocreate="true" generate="true">
+                <deployment table="Student" typecode="25010"/>
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.Integer">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="enteryTime" type="java.util.Date">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="newOrOldEntry" type="java.lang.Boolean">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+                <itemtype code="Erode2" autocreate="true" generate="true" extends="GenericItem">
+                    <deployment table="Erod" typecode="25018"/>
+                    <attributes>
+                        <attribute qualifier="salem" type="java.lang.String">
+                            <modifiers private="true"/>
+                            <persistence type="property"/>
+                        </attribute>
+                        <attribute qualifier="chennai" type="java.lang.String">
+                            <persistence type="property"/>
+                        </attribute>
+                        <attribute qualifier="tirupur" type="java.lang.String">
+                            <modifiers read="true" write="true" />
+                            <persistence type="property"/>
+                        </attribute>
+                    </attributes>
+                </itemtype>
+
+
+            <itemtype code="Teacher"  autocreate="true" generate="true">
+                <deployment table="Teacher" typecode="25011"/>
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.Integer">
+                        <modifiers read="true" write="true" optional="false" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name" type="java.lang.String">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+
+            <itemtype code="Test3"  autocreate="true" generate="false" extends="Student">
+                <deployment table="Test3" typecode="25013"/>
+                <attributes>
+                    <attribute qualifier="id1" type="java.lang.Integer">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name1" type="java.lang.String">
+                        <modifiers read="true" write="true"/>
+                        <defaultvalue>String.valueOf("Hybris")</defaultvalue>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+
+            <itemtype code="Test5"  autocreate="true" generate="true" abstract="true">
+                <deployment table="Test5" typecode="25015"/>
+                <attributes>
+                    <attribute qualifier="id1" type="java.lang.Integer">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                    <attribute qualifier="name1" type="java.lang.String">
+                        <modifiers read="true" write="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+
+            <itemtype code="Test9" autocreate="true" generate="true">
+                <deployment table="Test9" typecode="25021"/>
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.Integer">
+                        <modifiers write="true" read="true" optional="false"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+
+            <itemtype code="Test10" autocreate="true" generate="true">
+                <deployment table="Test10" typecode="25022"/>
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.Integer">
+                        <modifiers write="false" read="true" optional="false" initial="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+
+            <itemtype code="Computer" autocreate="true" generate="true">
+                <deployment table="Computer" typecode="25025"/>
+                <attributes>
+                    <attribute qualifier="id" type="java.lang.Integer">
+                        <modifiers write="true" read="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+
+                    <attribute qualifier="name" type="java.lang.String">
+                        <modifiers write="true" read="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+
+                    <attribute qualifier="Model" type="ModelsOfComputer">
+                        <modifiers write="true" read="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+
+                    <attribute qualifier="bill" type="Bill">
+                        <modifiers write="true" read="true"/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+            </itemtype>
+
+
+
+            <itemtype code="HelloWorldEmailProcess" extends="StoreFrontCustomerProcess"
+                      jaloclass="com.stackextend.training.core.jalo.process.HelloWorldEmailProcess">
+                <attributes>
+
+                    <attribute qualifier="firstName" type="java.lang.String">
+                        <persistence type="property" />
+                    </attribute>
+
+                </attributes>
+
+            </itemtype>
 
         </typegroup>
 

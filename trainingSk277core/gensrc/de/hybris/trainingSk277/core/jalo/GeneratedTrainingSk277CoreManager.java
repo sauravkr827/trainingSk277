@@ -1,13 +1,14 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Feb 24, 2021, 4:15:19 PM                    ---
+ * --- Generated at Mar 12, 2021, 6:10:53 PM                    ---
  * ----------------------------------------------------------------
  *  
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
  */
 package de.hybris.trainingSk277.core.jalo;
 
+import com.stackextend.training.core.jalo.process.HelloWorldEmailProcess;
 import de.hybris.platform.jalo.GenericItem;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
@@ -24,9 +25,17 @@ import de.hybris.trainingSk277.core.constants.TrainingSk277CoreConstants;
 import de.hybris.trainingSk277.core.jalo.ApparelProduct;
 import de.hybris.trainingSk277.core.jalo.ApparelSizeVariantProduct;
 import de.hybris.trainingSk277.core.jalo.ApparelStyleVariantProduct;
+import de.hybris.trainingSk277.core.jalo.Computer;
 import de.hybris.trainingSk277.core.jalo.ElectronicsColorVariantProduct;
+import de.hybris.trainingSk277.core.jalo.Erode2;
 import de.hybris.trainingSk277.core.jalo.ManuDetAuditEntry;
 import de.hybris.trainingSk277.core.jalo.ManufacturerDetails;
+import de.hybris.trainingSk277.core.jalo.Student;
+import de.hybris.trainingSk277.core.jalo.Teacher;
+import de.hybris.trainingSk277.core.jalo.Test;
+import de.hybris.trainingSk277.core.jalo.Test1;
+import de.hybris.trainingSk277.core.jalo.Test10;
+import de.hybris.trainingSk277.core.jalo.Test9;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -140,6 +149,32 @@ public abstract class GeneratedTrainingSk277CoreManager extends Extension
 		return createApparelStyleVariantProduct( getSession().getSessionContext(), attributeValues );
 	}
 	
+	public Computer createComputer(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.COMPUTER );
+			return (Computer)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Computer : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Computer createComputer(final Map attributeValues)
+	{
+		return createComputer( getSession().getSessionContext(), attributeValues );
+	}
+	
 	public ElectronicsColorVariantProduct createElectronicsColorVariantProduct(final SessionContext ctx, final Map attributeValues)
 	{
 		try
@@ -164,6 +199,58 @@ public abstract class GeneratedTrainingSk277CoreManager extends Extension
 	public ElectronicsColorVariantProduct createElectronicsColorVariantProduct(final Map attributeValues)
 	{
 		return createElectronicsColorVariantProduct( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Erode2 createErode2(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.ERODE2 );
+			return (Erode2)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Erode2 : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Erode2 createErode2(final Map attributeValues)
+	{
+		return createErode2( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public HelloWorldEmailProcess createHelloWorldEmailProcess(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.HELLOWORLDEMAILPROCESS );
+			return (HelloWorldEmailProcess)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating HelloWorldEmailProcess : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public HelloWorldEmailProcess createHelloWorldEmailProcess(final Map attributeValues)
+	{
+		return createHelloWorldEmailProcess( getSession().getSessionContext(), attributeValues );
 	}
 	
 	public ManuDetAuditEntry createManuDetAuditEntry(final SessionContext ctx, final Map attributeValues)
@@ -216,6 +303,214 @@ public abstract class GeneratedTrainingSk277CoreManager extends Extension
 	public ManufacturerDetails createManufacturerDetails(final Map attributeValues)
 	{
 		return createManufacturerDetails( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Student createStudent(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.STUDENT );
+			return (Student)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Student : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Student createStudent(final Map attributeValues)
+	{
+		return createStudent( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Teacher createTeacher(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.TEACHER );
+			return (Teacher)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Teacher : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Teacher createTeacher(final Map attributeValues)
+	{
+		return createTeacher( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Test createTest(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.TEST );
+			return (Test)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Test : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Test createTest(final Map attributeValues)
+	{
+		return createTest( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Test1 createTest1(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.TEST1 );
+			return (Test1)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Test1 : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Test1 createTest1(final Map attributeValues)
+	{
+		return createTest1( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Test10 createTest10(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.TEST10 );
+			return (Test10)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Test10 : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Test10 createTest10(final Map attributeValues)
+	{
+		return createTest10( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public GenericItem createTest2(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.TEST2 );
+			return (GenericItem)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Test2 : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public GenericItem createTest2(final Map attributeValues)
+	{
+		return createTest2( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public GenericItem createTest3(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.TEST3 );
+			return (GenericItem)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Test3 : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public GenericItem createTest3(final Map attributeValues)
+	{
+		return createTest3( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Test9 createTest9(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( TrainingSk277CoreConstants.TC.TEST9 );
+			return (Test9)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Test9 : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Test9 createTest9(final Map attributeValues)
+	{
+		return createTest9( getSession().getSessionContext(), attributeValues );
 	}
 	
 	@Override

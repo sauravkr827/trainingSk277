@@ -1,3 +1,4 @@
+/*
 package de.hybris.trainingSk277.core.customInterceptor;
 
 import de.hybris.platform.servicelayer.interceptor.InterceptorContext;
@@ -13,7 +14,7 @@ public class ManufacturerDetailsRemoveInterceptor implements RemoveInterceptor<M
     @Override
     public void onRemove(ManufacturerDetailsModel model, InterceptorContext ctx) throws InterceptorException
     {
-        ManufacturerDetailsAuditEntryModel auditEntryModel=ctx.getModelService().create(ManufacturerDetailsAuditEntryModel.class);
+       Manufac auditEntryModel=ctx.getModelService().create(ManufacturerDetailsAuditEntryModel.class);
 
         auditEntryModel.setId(model.getId());
         auditEntryModel.setName(model.getName());
@@ -24,3 +25,4 @@ public class ManufacturerDetailsRemoveInterceptor implements RemoveInterceptor<M
 
     }
 }
+*/
