@@ -33,6 +33,10 @@
 		<property name="pId" type="Integer"/>
 		<property name="pName" type="String"/>
 	</bean>
+	
+	<bean class="de.hybris.platform.commercefacades.user.data.CustomerData">
+		<property name="isNewBussinessUser" type="Boolean"/>
+	</bean>
 
 	<enum class="de.hybris.platform.commercefacades.product.ProductOption">
 		<value>ManufacturerDetails</value>

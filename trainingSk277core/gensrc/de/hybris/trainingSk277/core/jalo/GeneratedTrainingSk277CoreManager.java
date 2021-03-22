@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Mar 12, 2021, 6:10:53 PM                    ---
+ * --- Generated at Mar 16, 2021, 4:07:50 PM                    ---
  * ----------------------------------------------------------------
  *  
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
@@ -20,6 +20,8 @@ import de.hybris.platform.jalo.link.Link;
 import de.hybris.platform.jalo.product.Product;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
+import de.hybris.platform.jalo.user.Customer;
+import de.hybris.platform.jalo.user.User;
 import de.hybris.platform.util.Utilities;
 import de.hybris.trainingSk277.core.constants.TrainingSk277CoreConstants;
 import de.hybris.trainingSk277.core.jalo.ApparelProduct;
@@ -57,6 +59,9 @@ public abstract class GeneratedTrainingSk277CoreManager extends Extension
 	static
 	{
 		final Map<String, Map<String, AttributeMode>> ttmp = new HashMap();
+		Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>();
+		tmp.put("isNewBussinessUser", AttributeMode.INITIAL);
+		ttmp.put("de.hybris.platform.jalo.user.Customer", Collections.unmodifiableMap(tmp));
 		DEFAULT_INITIAL_ATTRIBUTES = ttmp;
 	}
 	@Override
@@ -517,6 +522,79 @@ public abstract class GeneratedTrainingSk277CoreManager extends Extension
 	public String getName()
 	{
 		return TrainingSk277CoreConstants.EXTENSIONNAME;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.isNewBussinessUser</code> attribute.
+	 * @return the isNewBussinessUser
+	 */
+	public Boolean isIsNewBussinessUser(final SessionContext ctx, final Customer item)
+	{
+		return (Boolean)item.getProperty( ctx, TrainingSk277CoreConstants.Attributes.Customer.ISNEWBUSSINESSUSER);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.isNewBussinessUser</code> attribute.
+	 * @return the isNewBussinessUser
+	 */
+	public Boolean isIsNewBussinessUser(final Customer item)
+	{
+		return isIsNewBussinessUser( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.isNewBussinessUser</code> attribute. 
+	 * @return the isNewBussinessUser
+	 */
+	public boolean isIsNewBussinessUserAsPrimitive(final SessionContext ctx, final Customer item)
+	{
+		Boolean value = isIsNewBussinessUser( ctx,item );
+		return value != null ? value.booleanValue() : false;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Customer.isNewBussinessUser</code> attribute. 
+	 * @return the isNewBussinessUser
+	 */
+	public boolean isIsNewBussinessUserAsPrimitive(final Customer item)
+	{
+		return isIsNewBussinessUserAsPrimitive( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.isNewBussinessUser</code> attribute. 
+	 * @param value the isNewBussinessUser
+	 */
+	public void setIsNewBussinessUser(final SessionContext ctx, final Customer item, final Boolean value)
+	{
+		item.setProperty(ctx, TrainingSk277CoreConstants.Attributes.Customer.ISNEWBUSSINESSUSER,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.isNewBussinessUser</code> attribute. 
+	 * @param value the isNewBussinessUser
+	 */
+	public void setIsNewBussinessUser(final Customer item, final Boolean value)
+	{
+		setIsNewBussinessUser( getSession().getSessionContext(), item, value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.isNewBussinessUser</code> attribute. 
+	 * @param value the isNewBussinessUser
+	 */
+	public void setIsNewBussinessUser(final SessionContext ctx, final Customer item, final boolean value)
+	{
+		setIsNewBussinessUser( ctx, item, Boolean.valueOf( value ) );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Customer.isNewBussinessUser</code> attribute. 
+	 * @param value the isNewBussinessUser
+	 */
+	public void setIsNewBussinessUser(final Customer item, final boolean value)
+	{
+		setIsNewBussinessUser( getSession().getSessionContext(), item, value );
 	}
 	
 	/**

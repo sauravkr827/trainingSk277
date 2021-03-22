@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Mar 12, 2021, 6:10:53 PM                    ---
+ * --- Generated at Mar 16, 2021, 4:07:50 PM                    ---
  * ----------------------------------------------------------------
  *  
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
@@ -41,6 +41,10 @@ public class GeneratedTrainingSk277CoreConstants
 	}
 	public static class Attributes
 	{
+		public static class Customer
+		{
+			public static final String ISNEWBUSSINESSUSER = "isNewBussinessUser".intern();
+		}
 		public static class Product
 		{
 			public static final String ISNEWPRODUCT = "isNewProduct".intern();
