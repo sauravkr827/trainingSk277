@@ -37,11 +37,6 @@
 	</bean>
 
 
-	<!---isNewBussinssUser Populator overriding using parent bean CustomerPopulator-->
-
-	<alias name="isNewBussUserPopulator" alias="customerPopulator"/>
-	<bean id="isNewBussUserPopulator" class="de.hybris.trainingSk277.facades.customPopulator.IsNewBussinessUserPopulator" parent="defaultCustomerPopulator"/>
-
 
 
 	<alias name="acceleratorVariantOptionDataConverter" alias="variantOptionDataConverter"/> 

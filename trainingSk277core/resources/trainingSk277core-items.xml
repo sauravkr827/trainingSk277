@@ -403,20 +403,6 @@
             </itemtype>
 
 
-            <itemtype code="Customer" autocreate="false" generate="false">
-
-                <attributes>
-                    <attribute qualifier="isNewBussinessUser" type="java.lang.Boolean">
-                        <modifiers read="true" write="true"/>
-                        <persistence type="property"/>
-                    </attribute>
-
-                </attributes>
-            </itemtype>
-
-
-
-
         </typegroup>
         
 
